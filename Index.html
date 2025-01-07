@@ -1,0 +1,523 @@
+<html>
+<link>
+<title>Resume</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="">
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,500&family=Teko:wght@400;500;600&display=swap");
+h1,
+h2,
+h3 {
+  font-family: "Teko", sans-serif;
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1em;
+}
+
+.intro__title {
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+.section__head {
+  color: #c13f3f;
+  font-size: 1.2em;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.section__subhead {
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+
+.section__body {
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #5a6369;
+}
+
+.section p {
+  padding-bottom: 10px; font-size: 19px; line-height: 30px;
+}
+.section p a {
+    color: #c13f3f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 20px;
+  font-size: 1.1em;
+  background-color: #ecf0f1;
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section__head {
+  background-color: #ecf0f1;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  position: -webkit-sticky;
+  position: sticky;
+  padding:10px 0 6px;
+  top: 0;
+}
+
+.section__head::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #28292a;
+}
+
+header {
+  color: white;
+  background-color: #c13f3f;
+  background-image: url("../img/bg-main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+
+.intro {
+  width: 90%;
+  margin: 10px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto;
+  grid-template-columns: 100px auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.intro__side {
+  -ms-grid-column-align: left;
+  justify-self: left;
+}
+
+.intro__side img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  border: 3px solid #fff;
+}
+
+.intro__title {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.intro__main {
+  padding-left: 15px;
+}
+
+.intro__line {
+  display: none;
+}
+
+.intro a {
+  color: white;
+  text-decoration: none;
+}
+ul li {
+    font-size: 19px;
+    line-height: 35px;
+    position: relative;
+    margin-left: 30px;
+}
+ul li:before {
+    position: absolute;
+    left: -35px;
+    top: 3px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background: #c13f3f;
+}
+.tag {
+    
+    font-weight: 600;
+}
+.tag-skill {
+    padding: 4px 7px;
+    border-radius: 30px;
+    box-shadow: 0 0 3px #201a1a;
+    margin: 6px;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1.2em;
+  }
+  .section {
+    -ms-grid-columns: 150px 1fr;
+    grid-template-columns: 150px 1fr;
+  }
+  .section__head {
+    padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    top: 10px;
+  }
+  .section__head::after {
+    content: none;
+  }
+  .section__body {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    border-left: 1px solid #999;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 300px 1fr;
+    grid-template-columns: 300px 1fr;
+    font-size: 1.5em;
+    grid-row-gap: 50px;
+  }
+  .section {
+    -ms-grid-columns: 200px 1fr;
+    grid-template-columns: 200px 1fr;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ 3;
+  }
+  .section--primary {
+    margin-top: 30px;
+  }
+  header {
+    position: relative;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1 / 6;
+  }
+  header .intro {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  header .intro__side,
+  header .intro__main {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    text-align: center;
+    padding: 20px 0;
+  }
+  header .intro p {
+    font-size: 0.8em;
+  }
+  header .intro img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-attachment: scroll;
+  }
+  .intro {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    color: #ecf0f1;
+  }
+  .intro__line {
+    display: block;
+    padding: 20px 20px 30px;
+  }
+  .intro__side {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-bottom: 20px;
+  }
+  .intro__main {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    text-align: center;
+    padding: 0;
+  }
+  .intro img {
+    width: 160px;
+    height: 160px;
+  }
+}
+</style>
+
+
+</head>
+
+
+<body>
+    <header>
+        <section class="intro">
+            <section class="intro__side">
+                <!-- <img src="https://picsum.photos/500/500" alt="" /> -->
+            </section>
+            <section class="intro__main">
+                <h1 class="intro__title">Maneesh Singh </h1>
+                <p>Frontend Developer | HTML Developer | UI Developer | MERN Developer</p>
+                <p style="padding-bottom: 10px; padding-top: 40px;"><a href="mailto:mr.manish212@gmail.com">Email ID:
+                        mr.manish212@gmail.com</a></p>
+                <hr />
+                <p style="padding-bottom: 10px; padding-top: 10px;">Contact No. 8586851990</p>
+                <hr />
+                <p style="padding-bottom: 10px; padding-top: 10px;"><a
+                        href="https://www.linkedin.com/in/maneesh-frontend-developer/"
+                        target="_blank">https://www.linkedin.com</a></p>
+                <hr />
+                <p style="padding-bottom: 10px; padding-top: 10px;"> <a href="https://github.com/arushsingh2017"
+                        target="_blank">GitHub</a></p>
+            </section>
+        </section>
+    </header>
+
+    <section class="section section--primary">
+        <h1 class="section__head">Summary</h1>
+        <section class="section__body">
+            <p>
+                A highly skilled and motivated frontend development with 6+ years of experience in designing, debugging
+                and implement code, user-friendly web applications. Proficient in React, Node, Express, JavaScript,
+                JSON, Bootstrap, Tailwind, HTML, CSS and various front-end frameworks. Strong problem-solving, fixed
+                issues and analytical skills, knowledge of RESTful API integration, pixel-perfect designs. Stay
+                up-to-date with emerging technologies and industry trends.
+
+            </p>
+
+
+
+        </section>
+    </section>
+
+    <!-- <p class="page-break"></p> -->
+    <!-- <section class="section">
+        <h1 class="section__head">Skills Expertise</h1>
+        <section class="section__body">
+            <ul>
+                <li>React</li>
+                <li>Next </li>
+                <li>Node</li>
+                <li>Express</li>                
+                <li>JavaScript</li>
+                <li>JSON</li>
+                <li>Bootstrap</li>
+                <li>Tailwind</li>
+                <li>RESTful API</li>
+                <li>Context API</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </section>
+    </section> -->
+    <section class="section">
+        <h1 class="section__head">Skills Expertise</h1>
+        <section class="section__body">
+
+            <h3>Programming</h3>
+            <p>HTML, CSS, Javascript, jQuery, JSON, Node JS</p>
+
+            <h3>Frameworks &amp; Tools</h3>
+            <p>React JS, Next JS ,Express JS, </p>
+
+            <h3>Databases</h3>
+            <p>MongoDB, Mysql,</p>
+
+            <h3>Design</h3>
+            <p>Bootstrap, Tailwind, CSS Animations, Photoshop</p>
+
+            <h3>Tool</h3>
+            <p>VS Code, Git, Postman, Figma, Canva</p>
+        </section>
+    </section>
+
+
+    <section class="section">
+
+        <h1 class="section__head">Professional Experience</h1>
+        <section class="section__body">
+            <h2 class="section__subhead">OpsTree Solution Pvt. Ltd. | Frontend Developer Dec 2021 - May 2024 </h2>
+            <p>
+                Project Name: OpsTree Solution/ BuildPiper/ MyGurukulam
+            </p>
+            <p> Writing clean, efficient, scalable, code and develop reusable components while collaborate with backend
+                teams. </p>
+            <p>Performance testing and debugging to ensure high-quality code. </p>
+            <p>Collaborated with cross-functional teams, including designers, developers, and project managers, to
+                deliver seamless user experiences. </p>
+            <p> Create reusable components and integrate REST API, fetching data using ReactJS. </p>
+
+
+        </section>
+
+        <section class="section__body">
+            <h2 class="section__subhead">Interactive Bees Pvt. Ltd | Frontend Developer Dec 2021 - May 2024 </h2>
+            <p>
+                Project Name: NASSCOM / NSDC / PMKVY
+            </p>
+
+            <ul>
+                <li>Website Development from Scratch</li>
+                <li>End-to-End Project Management</li>
+                <li>Landing Page Design</li>
+                <li>Email Template Design</li>
+                <li>Pixel-Perfect Web Page Design</li>
+                <li>Final Content Deployment</li>
+            </ul>
+
+
+
+
+        </section>
+
+    </section>
+
+    <section class="section">
+
+        <h1 class="section__head">Projects</h1>
+
+
+        <section class="section__body">
+            <h2 class="section__subhead">Project List</h2>
+
+            <li>
+                <p> Type: Website</p>
+                <p>Name: <a href="https://nsdcindia.org/" target="_blank">NSDC</a> | <a
+                        href="https://www.pmkvyofficial.org/pmkvy2/" target="_blank">PMKYV</a> | <a href="#"
+                        target="_blank">NASSCOM</a> </p>
+                <p><span>Tech Stack</span> HTML, CSS, JavaScript, Jquery, Bootstrap</p>
+            </li>
+            <hr>
+            <li>
+                <p>Type: WordPress/CMS </p>
+                <p>Name: <a href="https://opstree.com/" target="_blank">OpsTree Solution</a> | <a
+                        href="https://www.buildpiper.io/" target="_blank">BuildPiper</a> | <a href="https://opstree.us/"
+                        target="_blank">Opstree US</a> | <a href="#" target="_blank">My
+                        Gurukulam</a></p>
+                <p><span>Tech Stack</span> HTML, CSS, JavaScript, Jquery, Bootstrap</p>
+            </li>
+            <hr>
+            <li>
+                <p>Type: ReactJS/NextJS/MERN </p>
+                <p>Name: <a href="https://snapshops.vercel.app/" target="_blank">MERN 1</a> | <a
+                        href="https://manishshop.netlify.app/" target="_blank">MERN 2</a> | <a
+                        href="https://opstree.netlify.app/" target="_blank">MERN 3</a> </p>
+                <p><span>Tech Stack</span>
+                    <span class="tag-skill">React JS </span>
+                    <span class="tag-skill"> Tailwind </span>
+                    <span class="tag-skill">Bootstrap</span>
+                    <span class="tag-skill">Context-API</span>
+                    <span class="tag-skill"> JSON</span>
+                    <span class="tag-skill"> Express JS</span>
+                    <span class="tag-skill"> Node</span>
+                    <span class="tag-skill"> Next JS</span>
+                </p>
+            </li>
+            <hr>
+            <li>
+                <p>Type: Landing / Mailer </p>
+                <p>Name:
+                    <a href="https://snapshops.vercel.app/" target="_blank">NASSCOM Martech</a> |
+                    <a href="https://manishshop.netlify.app/" target="_blank">NASSCOM Skill Development</a> |
+                    <a href="https://opstree.netlify.app/" target="_blank">NASSCOM SME Advantage Program</a>
+                    <a href="https://snapshops.vercel.app/" target="_blank">NASSCOM GCC </a> |
+                    <a href="https://manishshop.netlify.app/" target="_blank">NASSCOM AI Summit</a> |
+                    <a href="https://opstree.netlify.app/" target="_blank">NASSCOM Engineering Summit</a>
+                    <a href="https://snapshops.vercel.app/" target="_blank">NASSCOM Virtual Fest </a> |
+                    <a href="https://manishshop.netlify.app/" target="_blank">NASSCOM NATC</a> |
+                    <a href="https://opstree.netlify.app/" target="_blank">NASSCOM Deep Tech Club</a>
+                </p>
+                <p><span class="tag">Tech Stack:</span>
+                    <span class="tag-skill"> HTML5 </span>
+                    <span class="tag-skill"> CSS/ CSS3 </span>
+                    <span class="tag-skill">JavaScript</span>
+                    <span class="tag-skill"> Jquery </span>
+                    <span class="tag-skill">Bootstrap </span>
+                </p>
+            </li>
+            <hr>
+
+
+
+
+
+        </section>
+
+    </section>
+
+
+    <section class="section">
+        <h1 class="section__head">Personal</h1>
+        <section class="section__body">
+            <h3>Date of birth</h3>
+            <p>13-July-1991.</p>
+
+            <h3>Languages</h3>
+            <p>English, Hindi</p>
+
+            <h3>Interests</h3>
+            <p>Music, Movies, Guitar and Tech.</p>
+        </section>
+    </section>
+
+</body>
+
+</html>
